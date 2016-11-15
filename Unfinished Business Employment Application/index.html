@@ -1,66 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
   <title>Responsive Website Template</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <script src="jquery-2.1.3.js"></script>
+  <script src="./bootstrap/js/bootstrap.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+
+  <style>
+    body {
+      padding-top: 50px;
+    }
+    
+    #masthead {
+      min-height: 250px;
+    }
+    
+    #masthead h1 {
+      font-size: 30px;
+      line-height: 1;
+      padding-top: 20px;
+    }
+    
+    #masthead .well {
+      margin-top: 8%;
+    }
+    
+    @media screen and (min-width: 768px) {
+      #masthead h1 {
+        font-size: 50px;
+      }
+    }
+    
+    .navbar-bright {
+      background-color: #111155;
+      color: #fff;
+    }
+    
+    .affix-top,
+    .affix {
+      position: static;
+    }
+    
+    @media (min-width: 979px) {
+      #sidebar.affix-top {
+        position: static;
+        margin-top: 30px;
+        width: 228px;
+      }
+      #sidebar.affix {
+        position: fixed;
+        top: 70px;
+        width: 228px;
+      }
+    }
+    
+    #sidebar li.active {
+      border: 0 #eee solid;
+      border-right-width: 5px;
+    }
+  </style> 
+
 </head>
 
-<body>
-  <div class="landing-page">
-    <div class="form-appointment">
-      <div class="wpcf7" id="wpcf7-f560-p590-o1">
-        <form action="/landing-page-template-do-not-delete/#wpcf7-f560-p590-o1" method="post" class="wpcf7-form" novalidate="novalidate"
-          _lpchecked="1">
-          <div style="display: none;">
-            <input type="hidden" name="_wpcf7" value="560">
-            <input type="hidden" name="_wpcf7_version" value="3.5">
-            <input type="hidden" name="_wpcf7_locale" value="">
-            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f560-p590-o1">
-            <input type="hidden" name="_wpnonce" value="dbb28877d5">
-          </div>
-          <div class="group">
-            <div style="width: 48%; float: left;">
-              <span class="wpcf7-form-control-wrap text-680"><input type="text" name="text-680" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" placeholder="Name"></span><br>
-              <span class="wpcf7-form-control-wrap email-680"><input type="email" name="email-680" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" placeholder="Email"></span><br>
-              <span class="wpcf7-form-control-wrap tel-630"><input type="tel" name="tel-630" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" placeholder="Phone"></span><br>
-              <span class="wpcf7-form-control-wrap textarea-398"><textarea name="textarea-398" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Special notes, concerns, or requirements"></textarea></span></div>
-            <div style="width: 48%; float: right;">
-              <h4>What is the best way to reach you?</h4>
-              <p><span class="wpcf7-form-control-wrap radio-98"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item"><label><input type="radio" name="radio-98" value="Phone">&nbsp;<span class="wpcf7-list-item-label">Phone</span></label>
-                </span><span class="wpcf7-list-item"><label><input type="radio" name="radio-98" value="Email">&nbsp;<span class="wpcf7-list-item-label">Email</span></label>
-                </span>
-                </span>
-                </span>
-              </p>
-              <h4>Days of the week you are available for appointment:</h4>
-              <p><span class="wpcf7-form-control-wrap checkbox-465"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Monday">&nbsp;<span class="wpcf7-list-item-label">Monday</span></label>
-                </span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Tuesday">&nbsp;<span class="wpcf7-list-item-label">Tuesday</span></label>
-                </span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Wednesday">&nbsp;<span class="wpcf7-list-item-label">Wednesday</span></label>
-                </span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Thursday">&nbsp;<span class="wpcf7-list-item-label">Thursday</span></label>
-                </span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Friday">&nbsp;<span class="wpcf7-list-item-label">Friday</span></label>
-                </span>
-                </span>
-                </span>
-              </p>
-              <h4>Best time of day for your appointment:</h4>
-              <p><span class="wpcf7-form-control-wrap checkbox-246"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-246[]" value="Morning">&nbsp;<span class="wpcf7-list-item-label">Morning</span></label>
-                </span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-246[]" value="Afternoon">&nbsp;<span class="wpcf7-list-item-label">Afternoon</span></label>
-                </span>
-                </span>
-                </span>
-              </p>
+<body data-spy="scroll" data-target=".sidebar" data-offset="50">
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a href="/" class="navbar-brand">Bootply</a>
+      </div>
+      <nav class="collapse navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#sec">Get Started</a>
+          </li>
+          <li>
+            <a href="#sec">Edit</a>
+          </li>
+          <li>
+            <a href="#sec">Visualize</a>
+          </li>
+          <li>
+            <a href="#sec">Prototype</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </nav>
+
+  <div id="masthead">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Bootstrap Sidebar
+            <p class="lead">With Affix and Scrollspy</p>
+          </h1>
+        </div>
+        <div class="col-md-5">
+          <div class="well well-lg">
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="//placehold.it/180x100" class="img-responsive">
+              </div>
+              <div class="col-sm-6">
+                Some text here
+              </div>
             </div>
           </div>
-          <div style="text-align: center; padding-top: 2em; border-top: 1px solid rgb(153, 202, 129); margin-top: 1em;"><input type="submit" value="Request My Appointment" class="wpcf7-form-control wpcf7-submit"><img class="ajax-loader"
-              src="http://www.professionalaudiologicalservices.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif"
-              alt="Sending ..." style="visibility: hidden;"></div>
-          <div class="wpcf7-response-output wpcf7-display-none"></div>
-        </form>
+        </div>
       </div>
     </div>
+    <!--/container-->
   </div>
+  <!--/masthead-->
+
+  <!--main-->
+  <div class="container">
+    <div class="row">
+      <!--left-->
+      <div class="col-md-3" id="leftCol">
+        <ul class="nav nav-stacked" id="sidebar">
+          <li><a href="#sec0">Section 0</a></li>
+          <li><a href="#sec1">Section 1</a></li>
+          <li><a href="#sec2">Section 2</a></li>
+          <li><a href="#sec3">Section 3</a></li>
+          <li><a href="#sec4">Section 4</a></li>
+        </ul>
+      </div>
+      <!--/left-->
+
+      <!--right-->
+      <div class="col-md-9">
+        <h2 id="sec0">Content</h2>
+        <p>
+          At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization.
+          Sure you can find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.</p>
+
+        <hr>
+        <p>
+          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+          ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores eos qui ratione voluptatem
+          sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+          quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+          veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut. Rem aperiam, eaque ipsa quae ab
+          illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+          voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores eos qui ratione voluptatem sequi nesciunt.
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+          eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+          nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!</p>
+
+        <h2 id="sec1">Content</h2>
+        <p>
+          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+          ipsam voluptatem quia voluptas sit aspernatur aut odit aut.
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3>Hello.</h3>
+              </div>
+              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque
+                mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis
+                nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet
+                augue.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3>Hello.</h3>
+              </div>
+              <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque
+                mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis
+                nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet
+                augue.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <h2 id="sec2">Section 2</h2>
+        <p>
+          Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+          ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores eos qui ratione voluptatem
+          sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+          quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+          veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!
+        </p>
+        <div class="row">
+          <div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
+          <div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
+          <div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
+        </div>
+
+        <hr>
+
+        <h2 id="sec3">Section 3</h2>
+        <p>
+          Images are responsive sed @mdo but sum are more fun peratis unde omnis iste natus error sit voluptatem accusantium doloremque
+          laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni
+          dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+          consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
+          quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+          ut..
+        </p>
+        <p>
+          Fos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+          adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut..</p>
+
+
+        <h2 id="sec4">Section 4</h2>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+          ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+          quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores eos qui ratione voluptatem sequi nesciunt.
+          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+          eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+          nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.</p>
+
+        <hr>
+        <h4><a href="http://www.bootply.com/Gygh9swISB">Edit on Bootply</a></h4>
+        <hr>
+
+      </div>
+      <!--/right-->
+    </div>
+    <!--/row-->
+  </div>
+  <!--/container-->
+
+  <script>
+
+  $('#sidebar').affix({
+  offset: {
+    top: 235
+  }
+});
+
+/* activate scrollspy menu */
+var $body   = $(document.body);
+var navHeight = $('.navbar').outerHeight(true) + 10;
+
+$body.scrollspy({
+	target: '#leftCol',
+	offset: navHeight
+});
+
+/* smooth scrolling sections */
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 50
+        }, 1000);
+        return false;
+      }
+    }
+});
+
+  </script>
 
 </body>
 
