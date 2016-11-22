@@ -143,13 +143,193 @@
             <!--/left-->
             <!--right-->
             <!--------------------------------------------Start form block 1--------------------------------->
+            <!--<div class="input-group">
+                <div class="input-group-addon">
+                </div>
+            </div>-->
+
             <div class="col-md-9">
 
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h2 id="sec0">Basic Information</h2>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-md-6">
+                                    <div class="panel panel-primary">
+
+                                        <span class="input-group-addon" id="basic-addon1">Your Name</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="First" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Middle" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Last" aria-describedby="basic-addon1">
+                                        </div>
+
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <select name="example" class="form-control" required>
+                                                <option value="" disabled selected hidden>Gender</option>
+                                                <option value="m">Male</option>
+                                                <option value="f">Female</option>
+                                                <option value="-">Other</option>
+                                                <option value="-">Prefer Not to Answer</option>
+                                            </select>
+                                        </div>
+
+                                        <span class="input-group-addon" id="basic-addon1">Race (Select All That Apply)</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <label class="form-control">
+                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> White
+                                            </label>
+                                            <label class="form-control">
+                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> Black or African American
+                                            </label>
+                                            <label class="form-control">
+                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> American Indian / Alaska Native
+                                            </label>
+                                            <label class="form-control">
+                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> Asian
+                                            </label>
+                                            <label class="form-control">
+                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> Hawaiian Native / Pacific Islander
+                                            </label>
+                                            <label class="form-control">
+                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> Hispanic / Latino
+                                            </label>
+                                            <label class="form-control">
+                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> Prefer Not to Answer
+                                            </label>
+                                        </div>
+
+                                        <span class="input-group-addon" id="basic-addon1">Are you at least 18 years of age? <br /> (All employees must be 18 or over)</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <select name="example" class="form-control" required>
+                                                <option value="" disabled selected hidden>Choose Yes or No...</option>
+                                                <option value="y">Yes</option>
+                                                <option value="n">No</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="panel panel-primary">
+
+                                        <span class="input-group-addon" id="basic-addon1">Current Residence</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Street" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="City" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="State" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="ZIP" aria-describedby="basic-addon1">
+                                        </div>
+
+                                        <span class="input-group-addon" id="basic-addon1">How long have you lived here?</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Months" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Years" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="panel panel-primary">
+                                        <span class="input-group-addon" id="basic-addon1">Social Security Number</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="###-##-####" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-primary">
+                                        <span class="input-group-addon" id="basic-addon1">Your Contact Information</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Home Phone" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Mobile Phone" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Primary E-mail" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Secondary E-mail (Optional)" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-primary">
+                                        <span class="input-group-addon" id="basic-addon1">Emergency Contact Information</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Relationship to You" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="First" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Middle" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Last" aria-describedby="basic-addon1">
+                                        </div>
+
+                                        <span class="input-group-addon" id="basic-addon1">Address</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Street" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="City" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="State" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="ZIP" aria-describedby="basic-addon1">
+                                        </div>
+                                                                                
+                                        <span class="input-group-addon" id="basic-addon1">Preferred Method of Notification</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Phone" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="E-mail" aria-describedby="basic-addon1">
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <span>Hello.</span>
+                                        </div>
+                                        <div class="panel-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque
+                                            mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis
+                                            nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet
+                                            augue.
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <hr>
+                <!--------------------------------------------End form block 1--------------------------------->
+
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h2 id="sec1">Education</h2>
                             </div>
                             <div class="panel-body">
 
@@ -178,7 +358,7 @@
                                 <div class="col-md-6">
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">Social Security Number</span>
-                                        <input type="text" class="form-control" placeholder="###-##-####" aria-describedby="basic-addon1">                                        
+                                        <input type="text" class="form-control" placeholder="###-##-####" aria-describedby="basic-addon1">
                                     </div>
 
                                     <div class="panel panel-primary">
@@ -202,39 +382,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <hr>
-                <!--------------------------------------------End form block 1--------------------------------->
-
-
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h2 id="sec1">Emergency Contact</h2>
-                            </div>
-                            <div class="panel-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque
-                                mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis
-                                nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet
-                                augue.
-                            </div>
-                        </div>
-                    </div>
-                    <!--<div class="col-md-6">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h3>Hello.</h3>
-                        </div>
-                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque
-                          mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis
-                          nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet
-                          augue.
-                        </div>
-                      </div>
-                    </div>-->
                 </div>
 
                 <hr>
@@ -243,16 +391,61 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h2 id="sec2">Section 2</h2>
+                                <h2 id="sec2">References</h2>
                             </div>
+
                             <div class="panel-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque
-                                mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis
-                                nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet
-                                augue.
+
+                                <div class="col-md-6">
+                                    <div class="panel panel-primary">
+                                        <span class="input-group-addon" id="basic-addon1">Name</span>
+                                        <input type="text" class="form-control" placeholder="First" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="Middle" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="Last" aria-describedby="basic-addon1">
+                                    </div>
+
+                                    <div class="panel panel-primary">
+                                        <span class="input-group-addon" id="basic-addon1">Current Residence</span>
+                                        <input type="text" class="form-control" placeholder="Street" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="City" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="State" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="ZIP" aria-describedby="basic-addon1">
+                                        <span class="input-group-addon" id="basic-addon1">
+                                            How long have you lived here?
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Months" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="Years" aria-describedby="basic-addon1">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="panel panel-primary">
+                                        <span class="input-group-addon" id="basic-addon1">Social Security Number</span>
+                                        <input type="text" class="form-control" placeholder="###-##-####" aria-describedby="basic-addon1">
+                                    </div>
+
+                                    <div class="panel panel-primary">
+                                        <span class="input-group-addon" id="basic-addon1">Contact Information</span>
+                                        <input type="text" class="form-control" placeholder="Home Phone" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="Mobile Phone" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="Primary E-mail" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="Secondary E-mail (Optional)" aria-describedby="basic-addon1">
+                                    </div>
+
+                                    <div class="panel panel-primary">
+                                        <span class="input-group-addon" id="basic-addon1">Emergency Contact Information</span>
+                                        <input type="text" class="form-control" placeholder="Street" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="City" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="State" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="State" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="ZIP" aria-describedby="basic-addon1">
+                                    </div>
+
+                                </div>
                             </div>
+
                         </div>
                     </div>
 
