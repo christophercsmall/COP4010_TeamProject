@@ -370,7 +370,6 @@
                             </div>
 
                             <div class="panel-body">
-
                                 <div class="col-md-6">
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">Reference #1</span>
@@ -428,7 +427,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
 
                         </div>
@@ -437,47 +435,51 @@
                 </div>
 
                 <hr>
+                <!--------------------------------------------End form block 3--------------------------------->
 
-                <h2 id="sec4">Section 4</h2>
-                <p>
-                    Form Content
-                </p>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
+                    <div class="col-md-12">
+                        <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3>Hello.</h3>
+                                <h2 id="sec3">Criminal Background</h2>
                             </div>
+
                             <div class="panel-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque
-                                mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis
-                                nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet
-                                augue.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3>Hello.</h3>
-                            </div>
-                            <div class="panel-body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque
-                                mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis
-                                nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet
-                                augue.
+                                <div class="col-md-6">
+                                    <div class="panel panel-primary">
+                                        <span class="input-group-addon" id="basic-addon1">Have you ever been convicted of a crime?</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <select name="example" class="form-control" required>
+                                                <option value="" disabled selected hidden>Choose Yes or No...</option>
+                                                <option value="m">Yes</option>
+                                                <option value="m">No</option>
+                                            </select>
+                                        </div>
+                                        <span class="input-group-addon" id="basic-addon1">If <b>Yes</b>, List all non-traffic offenses in the past 10 years.</span>
+                                        <a href="javascript:;" class="form-control" onclick="addElement();">+ Add New Offense</a>
+                                        <input type="hidden" value="0" id="theValue" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="myDiv"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <hr>
+                <!--------------------------------------------End form block 4--------------------------------->
 
 
 
 
                 <hr>
                 Submint button here.
+
+                
                 <hr>
 
             </div>
@@ -518,7 +520,36 @@
             }
         });
 
-        document.getElementById("datetime").innerHTML = Date();
+        function addElement() {
+
+            var ni = document.getElementById('myDiv');
+
+            var numi = document.getElementById('theValue');
+
+            var num = (document.getElementById('theValue').value - 1) + 2;
+
+            numi.value = num;
+
+            var newdiv = document.createElement('div');
+
+            var divIdName = 'my' + num + 'Div';
+
+            newdiv.setAttribute('id', divIdName);
+
+            newdiv.innerHTML = '<div class="panel panel-primary"><div class="input-group"><div class="input-group-addon"></div><input type="text" class="form-control" placeholder="Date" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Misdemeanor/Felony" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Description" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Confinement/Probation/Community Service" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Length of Time" aria-describedby="basic-addon1"></div><a style="color:darkred" class="form-control" href="javascript:;" onclick="removeElement(' + divIdName + '); return false;">Delete</a></div>';
+
+            ni.appendChild(newdiv);
+
+        }
+
+        function removeElement(divNum) {
+
+            var d = document.getElementById('myDiv');
+
+            var olddiv = document.getElementById(divNum.id);
+
+            d.removeChild(olddiv);
+        }
 
     </script>
 
