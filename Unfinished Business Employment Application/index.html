@@ -138,7 +138,7 @@
                     <li><a href="#sec4">Driver Information</a></li>
                     <li><a href="#sec5">Work History</a></li>
                     <li><a href="#sec6">Job Preferences</a></li>
-                    <li><a href="#sec7">Driver Information</a></li>
+                    <li><a href="#sec7">Acknowledgment and Waiver</a></li>
                 </ul>
             </div>
             <!--/left-->
@@ -453,8 +453,8 @@
                                             </div>
                                             <select name="example" class="form-control" required>
                                                 <option value="" disabled selected hidden>Choose Yes or No...</option>
-                                                <option value="m">Yes</option>
-                                                <option value="m">No</option>
+                                                <option value="y">Yes</option>
+                                                <option value="n">No</option>
                                             </select>
                                         </div>
                                         <span class="input-group-addon" id="basic-addon1">If <b>Yes</b>, List all non-traffic offenses in the past 10 years.</span>
@@ -473,13 +473,142 @@
                 <hr>
                 <!--------------------------------------------End form block 4--------------------------------->
 
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h2 id="sec4">Driver Information</h2>
+                            </div>
+                            <div class="panel-body">
 
+                                <div class="col-md-6">
+                                    <div class="panel panel-primary">
+                                        
+                                        <span class="input-group-addon" id="basic-addon1">Do you have a driver's license?</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <select onchange="showLicense(this.value);" name="example" class="form-control" required>
+                                                <option value="" disabled selected hidden>Choose Yes or No...</option>
+                                                <option value="y">Yes</option>
+                                                <option value="n">No</option>
+                                            </select>
+                                        </div>
 
+                                        <div hidden id="license">
+                                            <span class="input-group-addon" id="basic-addon1">License Information</span>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Driver's License Number" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-control" placeholder="State of Issue" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-control" placeholder="Expiration Date" aria-describedby="basic-addon1">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="panel panel-primary">
+
+                                        <span class="input-group-addon" id="basic-addon1">Do you currently own your own vehicle?</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <select onchange="showCar(this.value);" name="example" class="form-control" required>
+                                                <option value="" disabled selected hidden>Choose Yes or No...</option>
+                                                <option value="y">Yes</option>
+                                                <option value="n">No</option>
+                                            </select>
+                                        </div>
+
+                                        <div hidden id="car">
+                                            <span class="input-group-addon" id="basic-addon1">Vehicle Information</span>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Make" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-control" placeholder="Model" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-control" placeholder="Year" aria-describedby="basic-addon1">
+                                            </div>
+
+                                            <span class="input-group-addon" id="basic-addon1">Do you have car insurance?</span>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                </div>
+                                                <select name="example" class="form-control" required>
+                                                    <option value="" disabled selected hidden>Choose Yes or No...</option>
+                                                    <option value="y">Yes</option>
+                                                    <option value="n">No</option>
+                                                </select>
+                                            </div>
+
+                                            <span class="input-group-addon" id="basic-addon1">Are you willing to drive your vehicle for work duties?</span>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                </div>
+                                                <select name="example" class="form-control" required>
+                                                    <option value="" disabled selected hidden>Choose Yes or No...</option>
+                                                    <option value="y">Yes</option>
+                                                    <option value="n">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="panel panel-primary">
+                                        <span class="input-group-addon" id="basic-addon1">Traffic Accidents in Last 3 Years</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="How Many" aria-describedby="basic-addon1">
+                                        </div>
+
+                                        <span class="input-group-addon" id="basic-addon1">Traffic Violations in Last 3 Years</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="How Many" aria-describedby="basic-addon1">
+                                        </div>
+
+                                        <span class="input-group-addon" id="basic-addon1">Ever been stopped/suspended for drinking and driving?</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <select name="example" class="form-control" required>
+                                                <option value="" disabled selected hidden>Choose Yes or No...</option>
+                                                <option value="y">Yes</option>
+                                                <option value="n">No</option>
+                                            </select>
+                                        </div>
+
+                                        <span class="input-group-addon" id="basic-addon1">Ever been stopped/suspended for distracted driving?</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <select name="example" class="form-control" required>
+                                                <option value="" disabled selected hidden>Choose Yes or No...</option>
+                                                <option value="y">Yes</option>
+                                                <option value="n">No</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <hr>
-                Submint button here.
 
-                
+                <!--------------------------------------------End form block 5--------------------------------->
+
+
+                <input class="btn btn-primary" value="Submit"/>
                 <hr>
 
             </div>
@@ -549,6 +678,26 @@
             var olddiv = document.getElementById(divNum.id);
 
             d.removeChild(olddiv);
+        }
+
+        function showLicense(val) {
+            if (val == "y") {
+                document.getElementById("license").hidden = false;
+            }
+            else {
+                document.getElementById("license").hidden = true;
+            }
+            
+        }
+
+        function showCar(val) {
+            if (val == "y") {
+                document.getElementById("car").hidden = false;
+            }
+            else {
+                document.getElementById("car").hidden = true;
+            }
+
         }
 
     </script>
