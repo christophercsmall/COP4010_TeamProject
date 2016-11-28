@@ -483,7 +483,7 @@
 
                                 <div class="col-md-6">
                                     <div class="panel panel-primary">
-                                        
+
                                         <span class="input-group-addon" id="basic-addon1">Do you have a driver's license?</span>
                                         <div class="input-group">
                                             <div class="input-group-addon">
@@ -603,12 +603,105 @@
                     </div>
                 </div>
 
-                <hr>
-
                 <!--------------------------------------------End form block 5--------------------------------->
 
 
-                <input class="btn btn-primary" value="Submit"/>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h2 id="sec5">Work History</h2>
+                            </div>
+                            <div class="panel-body">
+
+                                <div class="col-md-6">
+                                    <div class="panel panel-primary">
+
+                                        <span class="input-group-addon" id="basic-addon1">Have you ever served in the military?</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>
+                                            <select onchange="showMilitary(this.value);" name="example" class="form-control" required>
+                                                <option value="" disabled selected hidden>Choose Yes or No...</option>
+                                                <option value="y">Yes</option>
+                                                <option value="n">No</option>
+                                            </select>
+                                        </div>
+
+                                        <div hidden id="military">
+                                            <span class="input-group-addon" id="basic-addon1">Military Service Information</span>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                </div>
+                                                <select name="example" class="form-control" required>
+                                                    <option value="" disabled selected hidden>Discharge Type...</option>
+                                                    <option value="h">Honorable</option>
+                                                    <option value="oth">Other Than Honorable</option>
+                                                    <option value="d">Dishonorable</option>
+                                                    <option value="d">Currently Enlisted</option>
+                                                </select>
+                                                <select name="example" class="form-control" required>
+                                                    <option value="" disabled selected hidden>Branch...</option>
+                                                    <option value="n">Navy</option>
+                                                    <option value="a">Army</option>
+                                                    <option value="af">Air Force</option>
+                                                    <option value="m">Marines</option>
+                                                    <option value="c">Coast Guard</option>
+                                                    <option value="ng">National Guard</option>
+                                                </select>
+                                                <input type="text" class="form-control" placeholder="Years in Active Duty" aria-describedby="basic-addon1">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="panel panel-primary">
+                                        <span class="input-group-addon" id="basic-addon1">List past 5 years starting with most recent.</span>
+                                        <div class="input-group">
+                                        </div>
+                                        <a href="javascript:;" class="form-control" onclick="addWrkElement();">+ Add New Work Experience</a>
+                                        <input type="hidden" value="0" id="theWrkValue" />
+                                    </div>
+
+                                </div>
+                                                                                              
+                                <div class="col-md-6">
+
+                                    <div id="myWrkDiv"></div>
+
+                                    <!---myWrkDiv template-->
+                                    <!--<div class="panel panel-primary">
+                                        <span class="input-group-addon" id="basic-addon1">Work Experience</span>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                            </div>                                            
+                                            <input type="text" class="form-control" placeholder="Employer Name" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Street Address" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="City, State, Zip" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Phone Number" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="E-mail" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Job Title" aria-describedby="basic-addon1">                                            
+                                            <input type="text" class="form-control" placeholder="Date Started" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Beginning Salary" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Date Finished" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Ending Salary" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Name of Supervisor" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Reason For Leaving" aria-describedby="basic-addon1">
+                                        </div>                                        
+                                    </div>-->
+                                    <!----->
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--------------------------------------------End form block 6--------------------------------->
+
+                <hr>
+                <input class="btn btn-primary" value="Submit" />
                 <hr>
 
             </div>
@@ -680,6 +773,39 @@
             d.removeChild(olddiv);
         }
 
+
+        function addWrkElement() {
+
+            var ni = document.getElementById('myWrkDiv');
+
+            var numi = document.getElementById('theWrkValue');
+
+            var num = (document.getElementById('theWrkValue').value - 1) + 2;
+
+            numi.value = num;
+
+            var newdiv = document.createElement('div');
+
+            var divIdName = 'my' + num + 'WrkDiv';
+
+            newdiv.setAttribute('id', divIdName);
+
+            newdiv.innerHTML = '<div class="panel panel-primary"><span class="input-group-addon" id="basic-addon1">Work Experience</span><div class="input-group"><div class="input-group-addon"></div><input type="text" class="form-control" placeholder="Employer Name" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Street Address" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="City, State, Zip" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Phone Number" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="E-mail" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Job Title" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Date Started" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Beginning Salary" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Date Finished" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Ending Salary" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Name of Supervisor" aria-describedby="basic-addon1"><input type="text" class="form-control" placeholder="Reason For Leaving" aria-describedby="basic-addon1"></div><a style="color:darkred" class="form-control" href="javascript:;" onclick="removeWrkElement(' + divIdName + '); return false;">Delete</a></div></div>';
+
+            ni.appendChild(newdiv);
+
+        }
+
+        function removeWrkElement(divNum) {
+
+            var d = document.getElementById('myWrkDiv');
+
+            var olddiv = document.getElementById(divNum.id);
+
+            d.removeChild(olddiv);
+        }
+
+
         function showLicense(val) {
             if (val == "y") {
                 document.getElementById("license").hidden = false;
@@ -687,7 +813,7 @@
             else {
                 document.getElementById("license").hidden = true;
             }
-            
+
         }
 
         function showCar(val) {
@@ -700,8 +826,20 @@
 
         }
 
+        function showMilitary(val) {
+            if (val == "y") {
+                document.getElementById("military").hidden = false;
+            }
+            else {
+                document.getElementById("military").hidden = true;
+            }
+
+        }
+
     </script>
 
 </body>
+
+
 
 </html>
