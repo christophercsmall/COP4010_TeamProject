@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Responsive Website Template</title>
+    <title>UNFinished Business Employment Application</title>
 
     <script src="jquery-2.1.3.js"></script>
     <script src="./bootstrap/js/bootstrap.js"></script>
@@ -131,14 +131,14 @@
             <div class="col-md-3" id="leftCol">
 
                 <ul class="nav nav-stacked" id="sidebar">
-                    <li><a href="#sec0">Basic Information</a></li>
-                    <li><a href="#sec1">Education</a></li>
-                    <li><a href="#sec2">References</a></li>
-                    <li><a href="#sec3">Criminal Background</a></li>
-                    <li><a href="#sec4">Driver Information</a></li>
-                    <li><a href="#sec5">Work History</a></li>
-                    <li><a href="#sec6">Job Preferences</a></li>
-                    <li><a href="#sec7">Acknowledgment and Waiver</a></li>
+                    <li><a href="#sec0">Basic Information <span id="section0"></span></a></li>
+                    <li><a id="section1" href="#sec1">Education</a></li>
+                    <li><a id="section2" href="#sec2">References</a></li>
+                    <li><a id="section3" href="#sec3">Criminal Background</a></li>
+                    <li><a id="section4" href="#sec4">Driver Information</a></li>
+                    <li><a id="section5" href="#sec5">Work History</a></li>
+                    <li><a id="section6" href="#sec6">Job Preferences</a></li>
+                    <li><a id="section7" href="#sec7">Acknowledgment and Waiver</a></li>
                 </ul>
             </div>
             <!--/left-->
@@ -176,57 +176,57 @@
 
                                         <span class="input-group-addon" id="basic-addon1">Your Name</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="bia" class="input-group-addon">
                                             </div>
-                                            <input type="text" class="form-control" placeholder="First" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="Middle" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="Last" aria-describedby="basic-addon1">
+                                            <input id="bia1" type="text" class="form-control" placeholder="First" aria-describedby="basic-addon1">
+                                            <input id="bia2" type="text" class="form-control" placeholder="Middle" aria-describedby="basic-addon1">
+                                            <input id="bia3" type="text" class="form-control" placeholder="Last" aria-describedby="basic-addon1">
                                         </div>
 
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="bib" class="input-group-addon">
                                             </div>
-                                            <select name="example" class="form-control" required>
+                                            <select id="bib1" name="example" class="form-control">
                                                 <option value="" disabled selected hidden>Gender</option>
                                                 <option value="m">Male</option>
                                                 <option value="f">Female</option>
-                                                <option value="-">Other</option>
-                                                <option value="-">Prefer Not to Answer</option>
+                                                <option value="o">Other</option>
+                                                <option value="p">Prefer Not to Answer</option>
                                             </select>
                                         </div>
 
                                         <span class="input-group-addon" id="basic-addon1">Race (Select All That Apply)</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="bic" class="input-group-addon">
                                             </div>
                                             <label class="form-control">
-                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> White
+                                                <input id="bic1" class="checkbox-inline" type="checkbox" value="option1"> White
                                             </label>
                                             <label class="form-control">
-                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> Black or African American
+                                                <input id="bic2" class="checkbox-inline" type="checkbox" value="option1"> Black or African American
                                             </label>
                                             <label class="form-control">
-                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> American Indian / Alaska Native
+                                                <input id="bic3" class="checkbox-inline" type="checkbox" value="option1"> American Indian / Alaska Native
                                             </label>
                                             <label class="form-control">
-                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> Asian
+                                                <input id="bic4" class="checkbox-inline" type="checkbox" value="option1"> Asian
                                             </label>
                                             <label class="form-control">
-                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> Hawaiian Native / Pacific Islander
+                                                <input id="bic5" class="checkbox-inline" type="checkbox" value="option1"> Hawaiian Native / Pacific Islander
                                             </label>
                                             <label class="form-control">
-                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> Hispanic / Latino
+                                                <input id="bic6" class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> Hispanic / Latino
                                             </label>
                                             <label class="form-control">
-                                                <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> Prefer Not to Answer
+                                                <input id="bic7" class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> Prefer Not to Answer
                                             </label>
                                         </div>
 
                                         <span class="input-group-addon" id="basic-addon1">Are you at least 18 years of age? <br /> (All employees must be 18 or over)</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="bid" class="input-group-addon">
                                             </div>
-                                            <select name="example" class="form-control" required>
+                                            <select id="bid1" name="example" class="form-control" required>
                                                 <option value="" disabled selected hidden>Choose Yes or No...</option>
                                                 <option value="y">Yes</option>
                                                 <option value="n">No</option>
@@ -238,20 +238,20 @@
 
                                         <span class="input-group-addon" id="basic-addon1">Current Residence</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="bie" class="input-group-addon">
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Street" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="City" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="State" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="ZIP" aria-describedby="basic-addon1">
+                                            <input id="bie1" type="text" class="form-control" placeholder="Street" aria-describedby="basic-addon1">
+                                            <input id="bie2" type="text" class="form-control" placeholder="City" aria-describedby="basic-addon1">
+                                            <input id="bie3" type="text" class="form-control" placeholder="State" aria-describedby="basic-addon1">
+                                            <input id="bie4" type="text" class="form-control" placeholder="ZIP" aria-describedby="basic-addon1">
                                         </div>
 
                                         <span class="input-group-addon" id="basic-addon1">How long have you lived here?</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="bif" class="input-group-addon">
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Months" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="Years" aria-describedby="basic-addon1">
+                                            <input id="bif1" type="text" class="form-control" placeholder="Months" aria-describedby="basic-addon1">
+                                            <input id="bif2" type="text" class="form-control" placeholder="Years" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
                                 </div>
@@ -260,54 +260,61 @@
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">Social Security Number</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="big" class="input-group-addon">
                                             </div>
-                                            <input type="text" class="form-control" placeholder="###-##-####" aria-describedby="basic-addon1">
+                                            <input id="big1" type="text" class="form-control" placeholder="###-##-####" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
 
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">Your Contact Information</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="bih" class="input-group-addon">
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Home Phone" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="Mobile Phone" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="Primary E-mail" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="Secondary E-mail (Optional)" aria-describedby="basic-addon1">
+                                            <input id="bih1" type="text" class="form-control" placeholder="Home Phone" aria-describedby="basic-addon1">
+                                            <input id="bih2" type="text" class="form-control" placeholder="Mobile Phone" aria-describedby="basic-addon1">
+                                            <input id="bih3" type="text" class="form-control" placeholder="Primary E-mail" aria-describedby="basic-addon1">
+                                            <input id="bih4" type="text" class="form-control" placeholder="Secondary E-mail (Optional)" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
 
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">Emergency Contact Information</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="bii" class="input-group-addon">
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Relationship to You" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="First" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="Middle" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="Last" aria-describedby="basic-addon1">
+                                            <input id="bii1" type="text" class="form-control" placeholder="Relationship to You" aria-describedby="basic-addon1">
+                                            <input id="bii2" type="text" class="form-control" placeholder="First" aria-describedby="basic-addon1">
+                                            <input id="bii3" type="text" class="form-control" placeholder="Middle" aria-describedby="basic-addon1">
+                                            <input id="bii4" type="text" class="form-control" placeholder="Last" aria-describedby="basic-addon1">
                                         </div>
 
                                         <span class="input-group-addon" id="basic-addon1">Address</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="bij" class="input-group-addon">
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Street" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="City" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="State" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="ZIP" aria-describedby="basic-addon1">
+                                            <input id="bij1" type="text" class="form-control" placeholder="Street" aria-describedby="basic-addon1">
+                                            <input id="bij2" type="text" class="form-control" placeholder="City" aria-describedby="basic-addon1">
+                                            <input id="bij3" type="text" class="form-control" placeholder="State" aria-describedby="basic-addon1">
+                                            <input id="bij4" type="text" class="form-control" placeholder="ZIP" aria-describedby="basic-addon1">
                                         </div>
 
                                         <span class="input-group-addon" id="basic-addon1">Preferred Method of Notification</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="bik" class="input-group-addon">
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Phone" aria-describedby="basic-addon1">
-                                            <input type="text" class="form-control" placeholder="E-mail" aria-describedby="basic-addon1">
+                                            <input id="bik1" type="text" class="form-control" placeholder="Phone" aria-describedby="basic-addon1">
+                                            <input id="bik2" type="text" class="form-control" placeholder="E-mail" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
+
                                 </div>
+
+                                <div class="col-md-12">
+                                    <button onclick="validateBasicInfo();" class="btn btn-default input-group" style="width:100%; border-color:blue;"><b>Click Here to Save Basic Information</b></button>
+                                </div>
+                                
+
                             </div>
                         </div>
                     </div>
@@ -354,6 +361,10 @@
                                             <textarea class="form-control" placeholder="Max 400 Characters" aria-describedby="basic-addon1" maxlength="400" style="resize:vertical; max-height:200px;"></textarea>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <button onclick="validateEdu();" class="btn btn-default input-group" style="width:100%; border-color:blue;"><b>Click Here to Save Education</b></button>
                                 </div>
 
                             </div>
@@ -431,6 +442,11 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="col-md-12">
+                                    <button onclick="validateRef();" class="btn btn-default input-group" style="width:100%; border-color:blue;"><b>Click Here to Save References</b></button>
+                                </div>
+
                             </div>
 
                         </div>
@@ -469,6 +485,11 @@
                                 <div class="col-md-6">
                                     <div id="myDiv"></div>
                                 </div>
+
+                                <div class="col-md-12">
+                                    <button onclick="validateCrim();" class="btn btn-default input-group" style="width:100%; border-color:blue;"><b>Click Here to Save Criminal Background</b></button>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -602,6 +623,11 @@
 
                                     </div>
                                 </div>
+
+                                <div class="col-md-12">
+                                    <button onclick="validateDriv();" class="btn btn-default input-group" style="width:100%; border-color:blue;"><b>Click Here to Save Driver Information</b></button>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -696,6 +722,10 @@
                                         </div>
                                     </div>-->
                                     <!----->
+                                </div>
+
+                                <div class="col-md-12">
+                                    <button onclick="validateWrkHis();" class="btn btn-default input-group" style="width:100%; border-color:blue;"><b>Click Here to Save Work History</b></button>
                                 </div>
 
                             </div>
@@ -820,6 +850,10 @@
 
                                 </div>
 
+                                <div class="col-md-12">
+                                    <button onclick="validateJobPref();" class="btn btn-default input-group" style="width:100%; border-color:blue;"><b>Click Here to Save Job Preferences</b></button>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -856,16 +890,16 @@
 
                                     <span class="input-group-addon" id="basic-addon1">Digital Signature</span>
                                     <div class="input-group">
-                                        <div class="input-group-addon">
+                                        <div id="sign" class="input-group-addon">
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Please Type Your Full Name Here" aria-describedby="basic-addon1">
+                                        <input id="sign1" type="text" class="form-control" placeholder="Please Type Your Full Name Here" aria-describedby="basic-addon1">
                                         <span class="form-control" id="signDateTime"></span>
                                     </div>
                                 </div>
 
                                 <hr>
                                 <div style="text-align:center;">
-                                    <input class="btn btn-primary" value="Submit" />
+                                    <button onclick="validate();" class="btn btn-primary" style="width:25%;" value="Submit">Submit</button>
                                 </div>
                                 <hr>
                             </div>
@@ -1013,17 +1047,110 @@
             else {
                 document.getElementById("military").hidden = true;
             }
-
         }
 
         document.getElementById("datetime").innerHTML = Date();
         document.getElementById("signDateTime").innerHTML = "<b>Date Signed: </b>" + Date();
 
+        function validate() {
+            var s = false;
+            var bi = validateBasicInfo();
+
+            var sign = document.getElementById("sign1").value;
+            if (sign == "") { document.getElementById("sign").style.backgroundColor = "red"; s = false;}
+            else { document.getElementById("sign").style.backgroundColor = "green"; s = true;}
+
+            if (s && bi) {
+                alert("Valid");
+            }
+            else {
+                alert("Not Valid");
+            }
+            
+        }
+
+        function validateBasicInfo() {
+            var valid = true;
+            var bia1 = document.getElementById("bia1").value;
+            var bia2 = document.getElementById("bia2").value;
+            var bia3 = document.getElementById("bia3").value;
+            var bib1 = document.getElementById("bib1").value;
+            var bic1 = document.getElementById("bic1").checked;
+            var bic2 = document.getElementById("bic2").checked;
+            var bic3 = document.getElementById("bic3").checked;
+            var bic4 = document.getElementById("bic4").checked;
+            var bic5 = document.getElementById("bic5").checked;
+            var bic6 = document.getElementById("bic6").checked;
+            var bic7 = document.getElementById("bic7").checked;
+            var bid1 = document.getElementById("bid1").value;
+            var bie1 = document.getElementById("bie1").value;
+            var bie2 = document.getElementById("bie2").value;
+            var bie3 = document.getElementById("bie3").value;
+            var bie4 = document.getElementById("bie4").value;
+            var bif1 = document.getElementById("bif1").value;
+            var bif2 = document.getElementById("bif2").value;
+            var big1 = document.getElementById("big1").value;
+            var bih1 = document.getElementById("bih1").value;
+            var bih2 = document.getElementById("bih2").value;
+            var bih3 = document.getElementById("bih3").value;
+            var bih4 = document.getElementById("bih4").value;
+            var bii1 = document.getElementById("bii1").value;
+            var bii2 = document.getElementById("bii2").value;
+            var bii3 = document.getElementById("bii3").value;
+            var bii4 = document.getElementById("bii4").value;
+            var bij1 = document.getElementById("bij1").value;
+            var bij2 = document.getElementById("bij2").value;
+            var bij3 = document.getElementById("bij3").value;
+            var bij4 = document.getElementById("bij4").value;
+            var bik1 = document.getElementById("bik1").value;
+            var bik2 = document.getElementById("bik2").value;
+
+            if (bia1 == "" || bia2 == "" || bia3 == "") { document.getElementById("bia").style.backgroundColor = "red"; valid = false; }
+            else { document.getElementById("bia").style.backgroundColor = "green"; }
+            
+            if (bib1 == "") { document.getElementById("bib").style.backgroundColor = "red"; valid = false; }
+            else { document.getElementById("bib").style.backgroundColor = "green"; }
+
+            if (bic1 == false && bic2 == false && bic3 == false && bic4 == false && bic5 == false && bic6 == false && bic7 == false) { document.getElementById("bic").style.backgroundColor = "red"; valid = false; }
+            else { document.getElementById("bic").style.backgroundColor = "green"; }
+            
+            if (bid1 == "") { document.getElementById("bid").style.backgroundColor = "red"; valid = false; }
+            else { document.getElementById("bid").style.backgroundColor = "green"; }
+
+            if (bie1 == "" || bie2 == "" || bie3 == "" || bie4 == "") { document.getElementById("bie").style.backgroundColor = "red"; valid = false; }
+            else { document.getElementById("bie").style.backgroundColor = "green"; }
+
+            if (bif1 == "" && bif2 == "") { document.getElementById("bif").style.backgroundColor = "red"; valid = false; }
+            else { document.getElementById("bif").style.backgroundColor = "green"; }
+
+            if (big1 == "") { document.getElementById("big").style.backgroundColor = "red"; valid = false; }
+            else { document.getElementById("big").style.backgroundColor = "green"; }
+
+            if (bih1 == "" || bih2 == "" || bih3 == "" || bih4 == "") { document.getElementById("bih").style.backgroundColor = "red"; valid = false; }
+            else { document.getElementById("bih").style.backgroundColor = "green"; }
+
+            if (bii1 == "" || bii2 == "" || bii3 == "" || bii4 == "") { document.getElementById("bii").style.backgroundColor = "red"; valid = false; }
+            else { document.getElementById("bii").style.backgroundColor = "green"; }
+
+            if (bij1 == "" || bij2 == "" || bij3 == "" || bij4 == "") { document.getElementById("bij").style.backgroundColor = "red"; valid = false; }
+            else { document.getElementById("bij").style.backgroundColor = "green"; }
+
+            if (bik1 == "" || bik2 == "") { document.getElementById("bik").style.backgroundColor = "red"; valid = false; }
+            else { document.getElementById("bik").style.backgroundColor = "green"; }
+
+            if (valid == true) { document.getElementById("section0").innerHTML = '<span class="tag tag-default"><span class="glyphicon glyphicon-ok-sign" style="color:limegreen;"></span></span>'; }
+            else { document.getElementById("section0").innerHTML = '<span class="tag tag-default"><span class="glyphicon glyphicon-remove-sign" style="color:red;"></span></span>'; }
+
+            return valid;
+        }
+
+        function validateEdu() {
+
+
+        }
 
     </script>
 
 </body>
-
-
 
 </html>
