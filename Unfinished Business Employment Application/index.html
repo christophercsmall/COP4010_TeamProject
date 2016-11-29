@@ -308,6 +308,7 @@
                                         </div>
                                     </div>
 
+                                    <button onclick="fillBasicInfo();" class="btn btn-primary input-group" style="width:100%; border-color:blue;"><b>Fill Dummy Data</b></button>
                                 </div>
 
                                 <div class="col-md-12">
@@ -1064,7 +1065,10 @@
             var message = "";
 
             var sign = document.getElementById("sign1").value;
-            if (sign == "") { document.getElementById("sign").style.backgroundColor = "red"; s = false; }
+            if (sign == "") {
+                document.getElementById("sign").style.backgroundColor = "red"; s = false;
+                document.getElementById("section7").innerHTML = '<span class="tag tag-default"><span class="glyphicon glyphicon-remove-sign" style="color:red;"></span></span>';
+            }
             else {
                 document.getElementById("sign").style.backgroundColor = "green"; s = true;
                 document.getElementById("section7").innerHTML = '<span class="tag tag-default"><span class="glyphicon glyphicon-ok-sign" style="color:limegreen;"></span></span>';
@@ -1215,6 +1219,37 @@
             document.getElementById("jp7").style.backgroundColor = "green"; s = true;
             document.getElementById("section6").innerHTML = '<span class="tag tag-default"><span class="glyphicon glyphicon-ok-sign" style="color:limegreen;"></span></span>';
             return true;
+        }
+
+        function fillBasicInfo() {
+            document.getElementById("bia1").value = "Christopher";
+            document.getElementById("bia2").value = "Charles";
+            document.getElementById("bia3").value = "Small";
+            document.getElementById("bib1").value = "m";
+            document.getElementById("bic1").checked = "true";
+           
+            document.getElementById("bid1").value = "y";
+            document.getElementById("bie1").value = "1 UNF Drive";
+            document.getElementById("bie2").value = "Jacksonville";
+            document.getElementById("bie3").value = "Florida";
+            document.getElementById("bie4").value = "32216";
+            document.getElementById("bif1").value = "3";
+            document.getElementById("bif2").value = "7";
+            document.getElementById("big1").value = "123-45-6789";
+            document.getElementById("bih1").value = "555-555-5555";
+            document.getElementById("bih2").value = "555-555-5555";
+            document.getElementById("bih3").value = "me1@unf.com";
+            document.getElementById("bih4").value = "me2@unf.com";
+            document.getElementById("bii1").value = "Father";
+            document.getElementById("bii2").value = "John";
+            document.getElementById("bii3").value = "Doe";
+            document.getElementById("bii4").value = "Smith";
+            document.getElementById("bij1").value = "1 UNF Drive";
+            document.getElementById("bij2").value = "Jacksonville";
+            document.getElementById("bij3").value = "Florida";
+            document.getElementById("bij4").value = "55555";
+            document.getElementById("bik1").value = "555-555-5555";
+            document.getElementById("bik2").value = "dad@unf.com";
         }
 
     </script>
