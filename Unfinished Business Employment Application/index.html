@@ -132,13 +132,13 @@
 
                 <ul class="nav nav-stacked" id="sidebar">
                     <li><a href="#sec0">Basic Information <span id="section0"></span></a></li>
-                    <li><a id="section1" href="#sec1">Education</a></li>
-                    <li><a id="section2" href="#sec2">References</a></li>
-                    <li><a id="section3" href="#sec3">Criminal Background</a></li>
-                    <li><a id="section4" href="#sec4">Driver Information</a></li>
-                    <li><a id="section5" href="#sec5">Work History</a></li>
-                    <li><a id="section6" href="#sec6">Job Preferences</a></li>
-                    <li><a id="section7" href="#sec7">Acknowledgment and Waiver</a></li>
+                    <li><a href="#sec1">Education <span id="section1"></span></a></li>
+                    <li><a href="#sec2">References <span id="section2"></span></a></li>
+                    <li><a href="#sec3">Criminal Background <span id="section3"></span></a></li>
+                    <li><a href="#sec4">Driver Information <span id="section4"></span></a></li>
+                    <li><a href="#sec5">Work History <span id="section5"></span></a></li>
+                    <li><a href="#sec6">Job Preferences <span id="section6"></span></a></li>
+                    <li><a href="#sec7">Acknowledgment & Waiver <span id="section7"></span></a></li>
                 </ul>
             </div>
             <!--/left-->
@@ -333,7 +333,7 @@
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">List your highest earned Diploma/Degree/Certificate</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="eda" class="input-group-addon">
                                             </div>
                                             <select name="example" class="form-control" required>
                                                 <option value="" disabled selected hidden>Choose One...</option>
@@ -356,7 +356,7 @@
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">Miscellaneous Training Earned</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="edb" class="input-group-addon">
                                             </div>
                                             <textarea class="form-control" placeholder="Max 400 Characters" aria-describedby="basic-addon1" maxlength="400" style="resize:vertical; max-height:200px;"></textarea>
                                         </div>
@@ -389,7 +389,7 @@
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">Reference #1</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="ref1" class="input-group-addon">
                                             </div>
                                             <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
                                             <input type="text" class="form-control" placeholder="Title" aria-describedby="basic-addon1">
@@ -402,7 +402,7 @@
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">Reference #3</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="ref3" class="input-group-addon">
                                             </div>
                                             <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
                                             <input type="text" class="form-control" placeholder="Title" aria-describedby="basic-addon1">
@@ -418,7 +418,7 @@
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">Reference #2</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="ref2" class="input-group-addon">
                                             </div>
                                             <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
                                             <input type="text" class="form-control" placeholder="Title" aria-describedby="basic-addon1">
@@ -431,7 +431,7 @@
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">Reference #4</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="ref4" class="input-group-addon">
                                             </div>
                                             <input type="text" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
                                             <input type="text" class="form-control" placeholder="Title" aria-describedby="basic-addon1">
@@ -469,7 +469,7 @@
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">Have you ever been convicted of a crime?</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="crim" class="input-group-addon">
                                             </div>
                                             <select name="example" class="form-control" required>
                                                 <option value="" disabled selected hidden>Choose Yes or No...</option>
@@ -511,7 +511,7 @@
 
                                         <span class="input-group-addon" id="basic-addon1">Do you have a driver's license?</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="dr1" class="input-group-addon">
                                             </div>
                                             <select onchange="showLicense(this.value);" name="example" class="form-control" required>
                                                 <option value="" disabled selected hidden>Choose Yes or No...</option>
@@ -523,7 +523,7 @@
                                         <div hidden id="license">
                                             <span class="input-group-addon" id="basic-addon1">License Information</span>
                                             <div class="input-group">
-                                                <div class="input-group-addon">
+                                                <div id="dr2" class="input-group-addon">
                                                 </div>
                                                 <input type="text" class="form-control" placeholder="Driver's License Number" aria-describedby="basic-addon1">
                                                 <input type="text" class="form-control" placeholder="State of Issue" aria-describedby="basic-addon1">
@@ -537,7 +537,7 @@
 
                                         <span class="input-group-addon" id="basic-addon1">Do you currently own your own vehicle?</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="dr3" class="input-group-addon">
                                             </div>
                                             <select onchange="showCar(this.value);" name="example" class="form-control" required>
                                                 <option value="" disabled selected hidden>Choose Yes or No...</option>
@@ -549,7 +549,7 @@
                                         <div hidden id="car">
                                             <span class="input-group-addon" id="basic-addon1">Vehicle Information</span>
                                             <div class="input-group">
-                                                <div class="input-group-addon">
+                                                <div id="dr4" class="input-group-addon">
                                                 </div>
                                                 <input type="text" class="form-control" placeholder="Make" aria-describedby="basic-addon1">
                                                 <input type="text" class="form-control" placeholder="Model" aria-describedby="basic-addon1">
@@ -558,7 +558,7 @@
 
                                             <span class="input-group-addon" id="basic-addon1">Do you have car insurance?</span>
                                             <div class="input-group">
-                                                <div class="input-group-addon">
+                                                <div id="dr5" class="input-group-addon">
                                                 </div>
                                                 <select name="example" class="form-control" required>
                                                     <option value="" disabled selected hidden>Choose Yes or No...</option>
@@ -569,7 +569,7 @@
 
                                             <span class="input-group-addon" id="basic-addon1">Are you willing to drive your vehicle for work duties?</span>
                                             <div class="input-group">
-                                                <div class="input-group-addon">
+                                                <div id="dr6" class="input-group-addon">
                                                 </div>
                                                 <select name="example" class="form-control" required>
                                                     <option value="" disabled selected hidden>Choose Yes or No...</option>
@@ -587,21 +587,21 @@
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">Traffic Accidents in Last 3 Years</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="dr7" class="input-group-addon">
                                             </div>
                                             <input type="text" class="form-control" placeholder="How Many" aria-describedby="basic-addon1">
                                         </div>
 
                                         <span class="input-group-addon" id="basic-addon1">Traffic Violations in Last 3 Years</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="dr8" class="input-group-addon">
                                             </div>
                                             <input type="text" class="form-control" placeholder="How Many" aria-describedby="basic-addon1">
                                         </div>
 
                                         <span class="input-group-addon" id="basic-addon1">Ever been stopped/suspended for drinking and driving?</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="dr9" class="input-group-addon">
                                             </div>
                                             <select name="example" class="form-control" required>
                                                 <option value="" disabled selected hidden>Choose Yes or No...</option>
@@ -612,7 +612,7 @@
 
                                         <span class="input-group-addon" id="basic-addon1">Ever been stopped/suspended for distracted driving?</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="dr10" class="input-group-addon">
                                             </div>
                                             <select name="example" class="form-control" required>
                                                 <option value="" disabled selected hidden>Choose Yes or No...</option>
@@ -651,7 +651,7 @@
 
                                         <span class="input-group-addon" id="basic-addon1">Have you ever served in the military?</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="wh1" class="input-group-addon">
                                             </div>
                                             <select onchange="showMilitary(this.value);" name="example" class="form-control" required>
                                                 <option value="" disabled selected hidden>Choose Yes or No...</option>
@@ -663,7 +663,7 @@
                                         <div hidden id="military">
                                             <span class="input-group-addon" id="basic-addon1">Military Service Information</span>
                                             <div class="input-group">
-                                                <div class="input-group-addon">
+                                                <div id="wh2" class="input-group-addon">
                                                 </div>
                                                 <select name="example" class="form-control" required>
                                                     <option value="" disabled selected hidden>Discharge Type...</option>
@@ -689,7 +689,7 @@
 
                                     <div class="panel panel-primary">
                                         <span class="input-group-addon" id="basic-addon1">List past 5 years starting with most recent.</span>
-                                        <div class="input-group">
+                                        <div id="wh3" class="input-group">
                                         </div>
                                         <a href="javascript:;" class="form-control" onclick="addWrkElement();">+ Add New Work Experience</a>
                                         <input type="hidden" value="0" id="theWrkValue" />
@@ -751,7 +751,7 @@
 
                                         <span class="input-group-addon" id="basic-addon1">Desired Position</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="jp1" class="input-group-addon">
                                             </div>
                                             <input type="text" class="form-control" placeholder="Postion Title" aria-describedby="basic-addon1">
                                             <input type="text" class="form-control" placeholder="Desired Salary" aria-describedby="basic-addon1">
@@ -759,7 +759,7 @@
 
                                         <span class="input-group-addon" id="basic-addon1">Desired Employment</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="jp2" class="input-group-addon">
                                             </div>
                                             <select name="example" class="form-control" required>
                                                 <option value="" disabled selected hidden>Choose One...</option>
@@ -775,7 +775,7 @@
 
                                         <span class="input-group-addon" id="basic-addon1">Have you ever been fired from a job?</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="jp3" class="input-group-addon">
                                             </div>
                                             <select name="example" class="form-control" required>
                                                 <option value="" disabled selected hidden>Choose Yes or No...</option>
@@ -793,7 +793,7 @@
 
                                         <span class="input-group-addon" id="basic-addon1">Date Available for Work</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="jp4" class="input-group-addon">
                                             </div>
                                             <input type="text" class="form-control" placeholder="Date" aria-describedby="basic-addon1">
                                         </div>
@@ -803,7 +803,7 @@
 
                                         <span class="input-group-addon" id="basic-addon1">Days Available to Work</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="jp5" class="input-group-addon">
                                             </div>
                                             <label class="form-control">
                                                 <input class="checkbox-inline" type="checkbox" id="inlineCheckbox1" value="option1"> Monday
@@ -830,14 +830,14 @@
 
                                         <span class="input-group-addon" id="basic-addon1">How many hours weekly can you work?</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="jp6" class="input-group-addon">
                                             </div>
                                             <input type="text" class="form-control" placeholder="Hours Per Week" aria-describedby="basic-addon1">
                                         </div>
 
                                         <span class="input-group-addon" id="basic-addon1">Are you available to work nights?</span>
                                         <div class="input-group">
-                                            <div class="input-group-addon">
+                                            <div id="jp7" class="input-group-addon">
                                             </div>
                                             <select name="example" class="form-control" required>
                                                 <option value="" disabled selected hidden>Choose Yes or No...</option>
@@ -851,7 +851,7 @@
                                 </div>
 
                                 <div class="col-md-12">
-                                    <button onclick="validateJobPref();" class="btn btn-default input-group" style="width:100%; border-color:blue;"><b>Click Here to Save Job Preferences</b></button>
+                                    <button onclick="validatePref();" class="btn btn-default input-group" style="width:100%; border-color:blue;"><b>Click Here to Save Job Preferences</b></button>
                                 </div>
 
                             </div>
@@ -899,7 +899,7 @@
 
                                 <hr>
                                 <div style="text-align:center;">
-                                    <button onclick="validate();" class="btn btn-primary" style="width:25%;" value="Submit">Submit</button>
+                                    <button id="submit" onclick="validate();" class="btn btn-primary" style="width:25%;" value="Submit">Submit</button>
                                 </div>
                                 <hr>
                             </div>
@@ -916,7 +916,7 @@
         <div class="container" style="text-align:center;">
             <p style="color:whitesmoke;">
                 <br />
-                THANK YOU FOR COMLETING THIS APPLICATION FORM AND FOR YOUR INTEREST IN UNFINISHED BUSINESS.<br />
+                THANK YOU FOR COMPLETING THIS APPLICATION FORM AND FOR YOUR INTEREST IN UNFINISHED BUSINESS.<br />
                 UNFINISHED BUSINESS IS AN EQUAL EMPLOYMENT OPPORTUNITY EMPLOYER.                
                 <br /><br />
                 Version 4.00
@@ -1055,18 +1055,34 @@
         function validate() {
             var s = false;
             var bi = validateBasicInfo();
+            var ed = validateEdu();
+            var ref = validateRef();
+            var crim = validateCrim();
+            var dr = validateDriv();
+            var wh = validateWrkHis();
+            var pref = validatePref();
+            var message = "";
 
             var sign = document.getElementById("sign1").value;
-            if (sign == "") { document.getElementById("sign").style.backgroundColor = "red"; s = false;}
-            else { document.getElementById("sign").style.backgroundColor = "green"; s = true;}
+            if (sign == "") { document.getElementById("sign").style.backgroundColor = "red"; s = false; }
+            else {
+                document.getElementById("sign").style.backgroundColor = "green"; s = true;
+                document.getElementById("section7").innerHTML = '<span class="tag tag-default"><span class="glyphicon glyphicon-ok-sign" style="color:limegreen;"></span></span>';
+            }
 
-            if (s && bi) {
-                alert("Valid");
+            if (s && bi && ed && ref && crim && dr && wh && pref) {
+                var message = "Thank You, your application has been submitted.";
+                document.getElementById("submit").disabled = true;
             }
             else {
-                alert("Not Valid");
+                var message = "Please check each section for incomplete fields.\n\n Don't forget to digitally sign at the bottom.";
             }
-            
+
+            showMessage(message);
+        }
+
+        function showMessage(message) {
+            alert(message);
         }
 
         function validateBasicInfo() {
@@ -1145,8 +1161,60 @@
         }
 
         function validateEdu() {
+            document.getElementById("eda").style.backgroundColor = "green"; s = true;
+            document.getElementById("edb").style.backgroundColor = "green"; s = true;
+            document.getElementById("section1").innerHTML = '<span class="tag tag-default"><span class="glyphicon glyphicon-ok-sign" style="color:limegreen;"></span></span>';
+            return true;
+        }
 
+        function validateRef() {
+            document.getElementById("ref1").style.backgroundColor = "green"; s = true;
+            document.getElementById("ref2").style.backgroundColor = "green"; s = true;
+            document.getElementById("ref3").style.backgroundColor = "green"; s = true;
+            document.getElementById("ref4").style.backgroundColor = "green"; s = true;
+            document.getElementById("section2").innerHTML = '<span class="tag tag-default"><span class="glyphicon glyphicon-ok-sign" style="color:limegreen;"></span></span>';
+            return true;
+        }
 
+        function validateCrim() {
+            document.getElementById("crim").style.backgroundColor = "green"; s = true;            
+            document.getElementById("section3").innerHTML = '<span class="tag tag-default"><span class="glyphicon glyphicon-ok-sign" style="color:limegreen;"></span></span>';
+            return true;
+        }
+
+        function validateDriv() {
+            document.getElementById("dr1").style.backgroundColor = "green"; s = true;
+            document.getElementById("dr2").style.backgroundColor = "green"; s = true;
+            document.getElementById("dr3").style.backgroundColor = "green"; s = true;
+            document.getElementById("dr4").style.backgroundColor = "green"; s = true;
+            document.getElementById("dr5").style.backgroundColor = "green"; s = true;
+            document.getElementById("dr6").style.backgroundColor = "green"; s = true;
+            document.getElementById("dr7").style.backgroundColor = "green"; s = true;
+            document.getElementById("dr8").style.backgroundColor = "green"; s = true;
+            document.getElementById("dr9").style.backgroundColor = "green"; s = true;
+            document.getElementById("dr10").style.backgroundColor = "green"; s = true;
+            document.getElementById("section4").innerHTML = '<span class="tag tag-default"><span class="glyphicon glyphicon-ok-sign" style="color:limegreen;"></span></span>';
+            return true;
+        }
+
+        function validateWrkHis() {
+            document.getElementById("wh1").style.backgroundColor = "green"; s = true;
+            document.getElementById("wh2").style.backgroundColor = "green"; s = true;
+            document.getElementById("wh3").style.backgroundColor = "green"; s = true;            
+            document.getElementById("section5").innerHTML = '<span class="tag tag-default"><span class="glyphicon glyphicon-ok-sign" style="color:limegreen;"></span></span>';
+            return true;
+        }
+
+        function validatePref() {
+            document.getElementById("jp1").style.backgroundColor = "green"; s = true;
+            document.getElementById("jp2").style.backgroundColor = "green"; s = true;
+            document.getElementById("jp3").style.backgroundColor = "green"; s = true;
+            document.getElementById("jp4").style.backgroundColor = "green"; s = true;
+            document.getElementById("jp5").style.backgroundColor = "green"; s = true;
+            document.getElementById("jp6").style.backgroundColor = "green"; s = true;
+            document.getElementById("jp7").style.backgroundColor = "green"; s = true;
+            document.getElementById("section6").innerHTML = '<span class="tag tag-default"><span class="glyphicon glyphicon-ok-sign" style="color:limegreen;"></span></span>';
+            return true;
         }
 
     </script>
